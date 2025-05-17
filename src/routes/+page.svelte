@@ -8,13 +8,13 @@
 
   let selectedVideo = null; // To store the selected video for viewing
 
-  const API_BASE_URL = 'http://147.182.146.205:8080';
+  const API_BASE_URL = 'https://allenskywolf.com';
 
 
   // Fetch videos from the backend
   async function fetchVideos() {
     try {
-      const res = await fetch('http://147.182.146.205:8080/getAllVideos');
+      const res = await fetch('https://allenskywolf.com/getAllVideos');
       if (!res.ok) throw new Error('Failed to fetch videos');
       videos = await res.json();
     } catch (error) {
@@ -60,7 +60,7 @@ try {
   try {
     console.log("videoId = ", videoId);
     
-    const res = await fetch(`http://147.182.146.205:8080/getVideoById?id=${videoId}`);
+    const res = await fetch(`https://allenskywolf.com/getVideoById?id=${videoId}`);
     if (!res.ok) throw new Error('Failed to fetch video');
 
     // Convert the response into a Blob
