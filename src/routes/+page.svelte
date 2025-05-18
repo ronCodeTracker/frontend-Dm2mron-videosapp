@@ -24,7 +24,7 @@
     const CHUNK_SIZE = 5 * 1024 * 1024;
     const totalChunks = Math.ceil(video.size / CHUNK_SIZE);
 
-    loadingVideo = true;console.log("upload: " + loadingVideo); )
+    loadingVideo = true;console.log("upload: " + loadingVideo); 
 
     for (let i = 0; i < totalChunks; i++) {
       const chunk = video.slice(i * CHUNK_SIZE, (i + 1) * CHUNK_SIZE);
