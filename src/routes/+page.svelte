@@ -104,7 +104,17 @@ try {
   <!-- Video Viewer -->
   {#if selectedVideo}
     <h2>Video Viewer</h2>
-    <video src={selectedVideo} controls autoplay width="600"></video>
+    <video
+      controls
+      autoplay
+      playsinline
+      muted
+      width="600"
+      style="max-width: 100%; height: auto;"
+    >
+      <source src={selectedVideo} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   {/if}
 
 
