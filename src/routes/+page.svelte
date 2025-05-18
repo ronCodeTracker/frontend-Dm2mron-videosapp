@@ -7,6 +7,9 @@
   let video;
 
   let selectedVideo = null; // To store the selected video for viewing
+  let loadingVideo = false; // <-- Add
+
+
 
   const API_BASE_URL = 'https://allenskywolf.com';
 
@@ -58,6 +61,7 @@ try {
   // Function to select a video for viewing
   async function viewVideo(videoId) {
   try {
+    loadingVideo = true; // <-- Start loading
     console.log("videoId = ", videoId);
     
     const res = await fetch(`https://allenskywolf.com/getVideoById?id=${videoId}`);
@@ -71,6 +75,8 @@ try {
   } catch (error) {
     console.error('Error fetching video:', error);
     alert('Failed to load video. Please try again.');
+  } finally {
+    loadingVideo = false; // <-- Stop loading
   }
 }
 
@@ -102,6 +108,12 @@ try {
     {/each}
   </ul>
   <!-- Video Viewer -->
+
+  {#if loadingVideo}
+    <p>Loading video...</p>
+  {/if}
+
+
   {#if selectedVideo}
     <h2>Video Viewer</h2>
     <video
