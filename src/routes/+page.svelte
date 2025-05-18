@@ -36,7 +36,7 @@
       formData.append('video', chunk);
 
       try {
-        const res = await fetch(`${API_BASE_URL}/createVideo`, {
+        const res = await fetch(`${API_BASE_URL}/uploadChunk`, {
           method: 'POST',
           body: formData,
         });
