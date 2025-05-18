@@ -168,6 +168,6 @@
     {/if}
   </div>
   <footer class="mt-10 text-blue-500 text-sm">
-    Today: {new Date().getDate()} Created by: Ronald Kiefer
+    Today: {new Date().getUTCMonth()}{new Date().getDate()} Created by: Ronald Kiefer
   </footer>
 </main>
