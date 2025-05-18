@@ -83,6 +83,13 @@ try {
 
 </script>
 
+<style>
+    @import "tailwindcss";      
+
+
+</style>
+
+
 <main>
   <h1>Video Management</h1>
 
@@ -129,6 +136,8 @@ try {
     </video>
   {/if}
 
-
+<h3 class="text-3xl font-bold underline">
+    Hello world!
+  </h3>
 
 </main>
