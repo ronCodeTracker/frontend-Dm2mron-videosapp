@@ -168,6 +168,6 @@
     {/if}
   </div>
   <footer class="mt-10 text-blue-500 text-sm">
-    &copy; {new Date().getFullYear()} DeronApp Video Management
+    Today: {new Date().getFullYear()} Created by: Ronald Kiefer
   </footer>
 </main>
