@@ -1,0 +1,13 @@
+
+
+
+.nav-link {
+    transition: color 0.3s, transform 0.3s;
+}
+.nav-link:hover {
+    color: #fbbf24; /* Tailwind amber-400 */
+    transform: scale(1.1);
+}
+
+
+
